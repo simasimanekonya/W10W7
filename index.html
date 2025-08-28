@@ -4,9 +4,9 @@ if (!([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]:
 }
 [Net.ServicePointManager]::SecurityProtocol=[Net.SecurityProtocolType]::Tls12
 if ([Environment]::OSVersion.Version.Build -in @(9200, 9600, 10240, 10586)) {
-  Invoke-WebRequest -UseBasicParsing 'revert8plus.gitlab.io/curl.exe' -OutFile "${env:temp}\curl.exe"
-  Invoke-WebRequest -UseBasicParsing 'revert8plus.gitlab.io/curl-ca-bundle.crt' -OutFile "${env:temp}\curl-ca-bundle.crt"
-  Invoke-WebRequest -UseBasicParsing 'revert8plus.gitlab.io/7za.exe' -OutFile "${env:temp}\7za.exe"
+  Invoke-WebRequest -UseBasicParsing 'simasimanekonya.github.io/W10W7/curl.exe' -OutFile "${env:temp}\curl.exe"
+  Invoke-WebRequest -UseBasicParsing 'simasimanekonya.github.io/W10W7/curl-ca-bundle.crt' -OutFile "${env:temp}\curl-ca-bundle.crt"
+  Invoke-WebRequest -UseBasicParsing 'simasimanekonya.github.io/W10W7/7za.exe' -OutFile "${env:temp}\7za.exe"
   & "${env:temp}\curl.exe" -L "https://archive.org/download/revert8plus/Windows%%207.7z" -o "${env:temp}\Windows7.7z"
   Remove-Item "${env:temp}\curl.exe"
   Remove-Item "${env:temp}\curl-ca-bundle.crt"
